@@ -2,8 +2,7 @@ import React from 'react';
 import { hot } from 'react-hot-loader/root';
 import { Route, BrowserRouter, Link } from 'react-router-dom';
 import GlobalStyle from './styles/GlobalStyle';
-import Counter from './pages/Counter';
-import TodoList from './pages/TodoList';
+import Demo from './pages/Demo';
 import QueryBuilder from './pages/QueryBuilder';
 
 function App() {
@@ -16,10 +15,7 @@ function App() {
           return (
             <ul>
               <li>
-                <Link to="/counter">Counter</Link>
-              </li>
-              <li>
-                <Link to="/todo-list">Todo List</Link>
+                <Link to="/demo">Demo</Link>
               </li>
               <li>
                 <Link to="query-builder">Query Builder</Link>
@@ -28,8 +24,8 @@ function App() {
           );
         }}
       />
-      <Route exact path="/todo-list" component={TodoList} />
-      <Route exact path="/counter" component={Counter} />
+      {/* <Route exact path="/todo-list" component={TodoList} /> */}
+      <Route exact path="/demo" component={Demo} />
       <Route exact path="/query-builder" component={QueryBuilder} />
       <GlobalStyle />
     </BrowserRouter>
